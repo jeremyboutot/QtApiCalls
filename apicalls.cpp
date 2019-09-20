@@ -12,6 +12,17 @@ ApiCalls::ApiCalls(QObject *parent) :
 
 }
 
+void ApiCalls::getJsonTestData()
+{
+    const QUrl API_ENDPOINT("https://jsonplaceholder.typicode.com/posts");
+    QNetworkRequest request;
+    request.setUrl(API_ENDPOINT);
+    mNetReply = mNetManager->get(request);
+    connect(mNetReply,&QIODevice::readyRead,this,&ApiCalls::dataReadyRead);
+    connect(mNetReply,&QNetworkReply::finished,this,&ApiCalls::dataReadFinished);
+}
+
+/*
 QByteArray ApiCalls::getJsonTestData()
 {
     const QUrl API_ENDPOINT("https://jsonplaceholder.typicode.com/posts");
@@ -23,6 +34,8 @@ QByteArray ApiCalls::getJsonTestData()
     return *mDataBuffer;
 
 }
+
+*/
 
 void ApiCalls::dataReadyRead()
 {
@@ -36,5 +49,6 @@ void ApiCalls::dataReadFinished()
     else
     {
         qDebug() << "Data fetch finished: " << QString(*mDataBuffer);
+        emit sendQByteArray(*mDataBuffer);
     }
 }

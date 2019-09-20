@@ -6,25 +6,78 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>439</width>
-    <height>227</height>
+    <width>418</width>
+    <height>316</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Widget</string>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout">
-   <item>
-    <widget class="QLabel" name="label">
-     <property name="text">
-      <string>Json Data</string>
-     </property>
-    </widget>
-   </item>
-   <item>
-    <widget class="QListWidget" name="listWidget"/>
-   </item>
-  </layout>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>9</x>
+     <y>9</y>
+     <width>48</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Json Data</string>
+   </property>
+  </widget>
+  <widget class="QListWidget" name="listWidget">
+   <property name="geometry">
+    <rect>
+     <x>9</x>
+     <y>127</y>
+     <width>405</width>
+     <height>93</height>
+    </rect>
+   </property>
+   <property name="alternatingRowColors">
+    <bool>true</bool>
+   </property>
+   <property name="isWrapping" stdset="0">
+    <bool>false</bool>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="comboBox">
+   <property name="geometry">
+    <rect>
+     <x>9</x>
+     <y>226</y>
+     <width>401</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="messageTextEdit">
+   <property name="geometry">
+    <rect>
+     <x>9</x>
+     <y>28</y>
+     <width>405</width>
+     <height>93</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>314</x>
+     <y>250</y>
+     <width>91</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Select Message</string>
+   </property>
+  </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>

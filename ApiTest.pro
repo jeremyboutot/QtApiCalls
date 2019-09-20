@@ -27,13 +27,16 @@ CONFIG += c++11
 SOURCES += \
         apicalls.cpp \
         main.cpp \
+        savedalertmessages.cpp \
         widget.cpp
 
 HEADERS += \
         apicalls.h \
+        savedalertmessages.h \
         widget.h
 
 FORMS += \
+        savedalertmessages.ui \
         widget.ui
 
 # Default rules for deployment.

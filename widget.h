@@ -19,7 +19,9 @@ private:
     Ui::Widget *ui;
 
 public slots:
-    void addListWidgetValues(QByteArray &dataBuffer);
+    void addListWidgetValues(const QByteArray &qbArray);
+private slots:
+    void on_comboBox_currentIndexChanged(const QString &arg1);
 };
 
 #endif // WIDGET_H

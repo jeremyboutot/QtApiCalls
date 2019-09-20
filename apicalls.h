@@ -14,7 +14,8 @@ public:
     void getJsonTestData();
 
 signals:
-    void sendQByteArray(QByteArray *qbArray);
+    void sendQByteArray(const QByteArray& qbArray);
+
 
 public slots:
 
